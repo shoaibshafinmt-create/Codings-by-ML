@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🇵🇰 Pakistan Independence Day – 14 August</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
+
+    <style>
+        /* ===== RESET & BASE ===== */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #01411c;
+            --primary-light: #006b3c;
+            --primary-dark: #00331a;
+            --gold: #f7d44a;
+            --gold-light: #fae27a;
+            --white: #ffffff;
+            --cream: #f4fff7;
+            --text-dark: #1a2e24;
+            --text-muted: #4a5f52;
+            --shadow: 0 20px 60px rgba(0, 40, 20, 0.20);
+            --shadow-sm: 0 6px 24px rgba(0, 40, 20, 0.10);
+            --radius: 20px;
+            --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        ::selection {
+            background: var(--gold);
+            color: var(--primary-dark);
+        }
+
+        /* ===== SCROLLBAR ===== */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--cream);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-light);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary);
+        }
+
+        /* ===== UTILITY ===== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-badge {
+            display: inline-block;
+            padding: 6px 18px;
+            background: var(--primary-light);
+            color: var(--white);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            border-radius: 50px;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: clamp(32px, 5vw, 52px);
+            font-weight: 900;
+            color: var(--primary-dark);
+            letter-spacing: -0.02em;
+            line-height: 1.15;
+        }
+
+        .section-title .highlight {
+            color: var(--primary-light);
+            position: relative;
+        }
+
+        .section-title .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: var(--gold);
+            opacity: 0.35;
+            border-radius: 4px;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--text-muted);
+            max-width: 640px;
+            margin-top: 12px;
+            line-height: 1.8;
+        }
+
+        /* ===== NAVBAR ===== */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 14px 40px;
+            background: rgba(1, 65, 28, 0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 9999;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            transition: var(--transition);
+        }
+
+        nav.scrolled {
+            padding: 10px 40px;
+            background: rgba(0, 51, 26, 0.96);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--white);
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            text-decoration: none;
+        }
+
+        .logo .flag-icon {
+            font-size: 28px;
+            line-height: 1;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+            align-items: center;
+        }
+
+        nav a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: var(--transition);
+            position: relative;
+            padding: 4px 0;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0;
+            height: 2.5px;
+            background: var(--gold);
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            color: var(--white);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--gold);
+            color: var(--primary-dark) !important;
+            padding: 8px 22px !important;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: var(--transition);
+        }
+
+        .nav-cta::after {
+            display: none !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--gold-light);
+            transform: scale(1.04);
+            color: var(--primary-dark) !important;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 6px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 28px;
+            height: 3px;
+            background: var(--white);
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 24px 60px;
+            background: linear-gradient(145deg, #00331a 0%, #01411c 40%, #006b3c 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Animated background circles */
+        .hero-bg-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.04);
+            pointer-events: none;
+        }
+
+        .hero-bg-circle:nth-child(1) {
+            width: 600px;
+            height: 600px;
+            top: -200px;
+            right: -200px;
+            animation: floatCircle 20s ease-in-out infinite alternate;
+        }
+
+        .hero-bg-circle:nth-child(2) {
+            width: 400px;
+            height: 400px;
+            bottom: -150px;
+            left: -150px;
+            animation: floatCircle 25s ease-in-out infinite alternate-reverse;
+        }
+
+        .hero-bg-circle:nth-child(3) {
+            width: 200px;
+            height: 200px;
+            top: 30%;
+            left: 10%;
+            animation: floatCircle 18s ease-in-out infinite alternate;
+            background: rgba(247, 212, 74, 0.06);
+        }
+
+        @keyframes floatCircle {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+            100% {
+                transform: translate(40px, -40px) scale(1.1);
+            }
+        }
+
+        /* Stars particles container */
+        #stars-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+        }
+
+        /* ===== FLAG ===== */
+        .flag-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 32px;
+            perspective: 1000px;
+        }
+
+        .flag-3d {
+            width: 340px;
+            height: 220px;
+            background: linear-gradient(to right, var(--white) 0 25%, var(--primary) 25% 100%);
+            position: relative;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45), 0 0 0 2px rgba(255, 255, 255, 0.10);
+            transform: rotateY(-4deg) rotateX(2deg);
+            transition: transform 0.6s ease;
+            animation: flagWave 6s ease-in-out infinite alternate;
+        }
+
+        .flag-3d:hover {
+            transform: rotateY(0deg) rotateX(0deg) scale(1.02);
+        }
+
+        @keyframes flagWave {
+            0% {
+                transform: rotateY(-4deg) rotateX(2deg) skewY(0.5deg);
+            }
+            100% {
+                transform: rotateY(4deg) rotateX(-1deg) skewY(-0.5deg);
+            }
+        }
+
+        .flag-3d .crescent {
+            position: absolute;
+            width: 90px;
+            height: 90px;
+            background: var(--white);
+            border-radius: 50%;
+            top: 50%;
+            left: calc(25% + 20px);
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.20);
+        }
+
+        .flag-3d .crescent::after {
+            content: "";
+            position: absolute;
+            width: 78px;
+            height: 78px;
+            background: var(--primary);
+            border-radius: 50%;
+            top: -4px;
+            left: 18px;
+        }
+
+        .flag-3d .star {
+            position: absolute;
+            color: var(--white);
+            font-size: 52px;
+            top: 50%;
+            left: calc(25% + 58px);
+            transform: translate(-50%, -50%) rotate(-12deg);
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.20);
+            line-height: 1;
+        }
+
+        .flag-shine {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
+            border-radius: 8px;
+            pointer-events: none;
+        }
+
+        /* ===== HERO TEXT ===== */
+        .hero-title {
+            font-size: clamp(44px, 8vw, 88px);
+            font-weight: 900;
+            color: var(--white);
+            letter-spacing: -0.03em;
+            line-height: 1.05;
+            text-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+            margin-bottom: 8px;
+        }
+
+        .hero-title .gold {
+            color: var(--gold);
+        }
+
+        .hero-sub {
+            font-size: clamp(20px, 3.5vw, 40px);
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 16px;
+        }
+
+        .hero-desc {
+            font-size: clamp(16px, 1.3vw, 21px);
+            color: rgba(255, 255, 255, 0.78);
+            max-width: 640px;
+            margin: 0 auto 32px;
+            line-height: 1.9;
+        }
+
+        .hero-date {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px 36px;
+            border: 2px solid rgba(255, 255, 255, 0.25);
+            border-radius: 60px;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--white);
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(8px);
+            transition: var(--transition);
+        }
+
+        .hero-date:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--gold);
+            transform: scale(1.03);
+        }
+
+        .hero-date .date-emoji {
+            font-size: 28px;
+        }
+
+        /* ===== SCROLL INDICATOR ===== */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            animation: bounceDown 2s ease-in-out infinite;
+        }
+
+        .scroll-indicator .mouse {
+            width: 24px;
+            height: 38px;
+            border: 2px solid rgba(255, 255, 255, 0.25);
+            border-radius: 12px;
+            position: relative;
+        }
+
+        .scroll-indicator .mouse::after {
+            content: '';
+            position: absolute;
+            top: 6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 10px;
+            background: var(--gold);
+            border-radius: 4px;
+            animation: scrollDot 2s ease-in-out infinite;
+        }
+
+        @keyframes scrollDot {
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+                opacity: 1;
+            }
+            50% {
+                transform: translateX(-50%) translateY(12px);
+                opacity: 0.2;
+            }
+        }
+
+        @keyframes bounceDown {
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                transform: translateX(-50%) translateY(6px);
+            }
+        }
+
+        /* ===== SECTIONS ===== */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .section-header .section-subtitle {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ===== ABOUT ===== */
+        .about-section {
+            background: var(--white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text p {
+            font-size: 18px;
+            line-height: 1.9;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+
+        .about-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .about-text strong {
+            color: var(--primary-dark);
+            font-weight: 700;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .stat-card {
+            background: var(--cream);
+            border-radius: var(--radius);
+            padding: 28px 20px;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(1, 65, 28, 0.06);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-sm);
+            border-color: var(--primary-light);
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: 900;
+            color: var(--primary-light);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        /* ===== TIMELINE ===== */
+        .timeline-section {
+            background: var(--cream);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--primary-light), var(--gold));
+            transform: translateX(-50%);
+            border-radius: 4px;
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: flex-end;
+            padding: 0 0 50px 0;
+            position: relative;
+            width: 50%;
+        }
+
+        .timeline-item:nth-child(odd) {
+            padding-right: 50px;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            align-self: flex-end;
+            justify-content: flex-start;
+            padding-left: 50px;
+            text-align: left;
+            margin-left: 50%;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 4px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--gold);
+            border: 4px solid var(--primary-light);
+            box-shadow: 0 0 0 4px rgba(1, 65, 28, 0.12);
+            z-index: 2;
+        }
+
+        .timeline-item:nth-child(odd)::before {
+            right: -8px;
+        }
+        .timeline-item:nth-child(even)::before {
+            left: -8px;
+        }
+
+        .timeline-content {
+            background: var(--white);
+            padding: 24px 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(1, 65, 28, 0.06);
+            transition: var(--transition);
+        }
+
+        .timeline-content:hover {
+            box-shadow: var(--shadow);
+            transform: translateY(-4px);
+        }
+
+        .timeline-year {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--primary-light);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .timeline-content h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 4px;
+        }
+
+        .timeline-content p {
+            font-size: 15px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* ===== VALUES / CARDS ===== */
+        .values-section {
+            background: var(--white);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .value-card {
+            background: var(--cream);
+            border-radius: var(--radius);
+            padding: 40px 30px;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .value-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary-light), var(--gold));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--transition);
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow);
+            border-color: rgba(1, 65, 28, 0.08);
+        }
+
+        .value-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .value-icon {
+            font-size: 54px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .value-card h3 {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+
+        .value-card p {
+            color: var(--text-muted);
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        /* ===== QUOTE ===== */
+        .quote-section {
+            background: linear-gradient(145deg, var(--primary-dark), var(--primary-light));
+            color: var(--white);
+            text-align: center;
+            padding: 100px 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quote-section::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 200px;
+            color: rgba(255, 255, 255, 0.04);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .quote-section blockquote {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: clamp(26px, 4vw, 42px);
+            font-weight: 700;
+            line-height: 1.5;
+            position: relative;
+            z-index: 1;
+        }
+
+        .quote-section blockquote::before {
+            content: '"';
+            font-size: 60px;
+            color: var(--gold);
+            opacity: 0.5;
+            margin-right: 6px;
+        }
+
+        .quote-section blockquote::after {
+            content: '"';
+            font-size: 60px;
+            color: var(--gold);
+            opacity: 0.5;
+            margin-left: 6px;
+        }
+
+        .quote-section cite {
+            display: block;
+            margin-top: 24px;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--gold-light);
+            font-style: normal;
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== MESSAGE / CTA ===== */
+        .message-section {
+            background: var(--white);
+            text-align: center;
+        }
+
+        .message-section .section-subtitle {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 44px;
+            background: var(--primary-light);
+            color: var(--white);
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 60px;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 8px 30px rgba(0, 107, 60, 0.30);
+            margin-top: 8px;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 14px 40px rgba(0, 107, 60, 0.40);
+        }
+
+        .btn-primary .btn-emoji {
+            font-size: 24px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--primary-dark);
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+            padding: 50px 24px 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        footer .footer-flag {
+            font-size: 44px;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        footer h3 {
+            color: var(--white);
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        footer .footer-date {
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+
+        footer p {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.5);
+            max-width: 480px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        footer .footer-heart {
+            color: #ff6b6b;
+        }
+
+        footer .footer-divider {
+            width: 60px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.10);
+            margin: 16px auto;
+            border-radius: 4px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .about-grid {
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            nav {
+                padding: 12px 24px;
+            }
+            nav ul {
+                gap: 20px;
+            }
+            nav a {
+                font-size: 14px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about-stats {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding: 0 0 40px 40px !important;
+                text-align: left !important;
+                margin-left: 0 !important;
+                justify-content: flex-start !important;
+            }
+
+            .timeline-item:nth-child(odd) {
+                padding-right: 0 !important;
+            }
+
+            .timeline-item::before {
+                left: -8px !important;
+                right: auto !important;
+            }
+
+            .timeline::before {
+                left: 0;
+            }
+
+            .flag-3d {
+                width: 260px;
+                height: 170px;
+            }
+            .flag-3d .crescent {
+                width: 70px;
+                height: 70px;
+                left: calc(25% + 10px);
+            }
+            .flag-3d .crescent::after {
+                width: 60px;
+                height: 60px;
+                left: 14px;
+                top: -2px;
+            }
+            .flag-3d .star {
+                font-size: 40px;
+                left: calc(25% + 44px);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hamburger {
+                display: flex;
+            }
+
+            nav ul {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                flex-direction: column;
+                background: rgba(0, 51, 26, 0.98);
+                backdrop-filter: blur(16px);
+                padding: 20px 24px 28px;
+                gap: 16px;
+                border-top: 1px solid rgba(255, 255, 255, 0.06);
+                display: none;
+            }
+
+            nav ul.open {
+                display: flex;
+            }
+
+            nav a {
+                font-size: 16px;
+                padding: 8px 0;
+            }
+
+            .nav-cta {
+                align-self: flex-start;
+            }
+
+            .hero-title {
+                font-size: 38px;
+            }
+            .hero-sub {
+                font-size: 22px;
+            }
+            .hero-date {
+                font-size: 17px;
+                padding: 12px 24px;
+                gap: 10px;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .stat-number {
+                font-size: 28px;
+            }
+
+            .timeline-content {
+                padding: 18px 20px;
+            }
+            .timeline-year {
+                font-size: 17px;
+            }
+            .timeline-content h4 {
+                font-size: 16px;
+            }
+
+            .btn-primary {
+                padding: 14px 32px;
+                font-size: 16px;
+            }
+
+            .flag-3d {
+                width: 200px;
+                height: 130px;
+            }
+            .flag-3d .crescent {
+                width: 54px;
+                height: 54px;
+                left: calc(25% + 8px);
+            }
+            .flag-3d .crescent::after {
+                width: 46px;
+                height: 46px;
+                left: 10px;
+                top: -1px;
+            }
+            .flag-3d .star {
+                font-size: 30px;
+                left: calc(25% + 34px);
+            }
+        }
+
+        @media (max-width: 420px) {
+            .about-stats {
+                grid-template-columns: 1fr;
+            }
+            .hero-title {
+                font-size: 32px;
+            }
+            .hero-date {
+                font-size: 15px;
+                padding: 10px 18px;
+            }
+            .section-title {
+                font-size: 28px;
+            }
+        }
+
+        /* ===== REVEAL ANIMATIONS ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 {
+            transition-delay: 0.1s;
+        }
+        .reveal-delay-2 {
+            transition-delay: 0.2s;
+        }
+        .reveal-delay-3 {
+            transition-delay: 0.3s;
+        }
+        .reveal-delay-4 {
+            transition-delay: 0.4s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav id="navbar" role="navigation" aria-label="Main navigation">
+        <a href="#home" class="logo">
+            <span class="flag-icon">🇵🇰</span>
+            Pakistan<span>Independence</span>
+        </a>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul id="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+            <li><a href="#values">Values</a></li>
+            <li><a href="#message" class="nav-cta">🇵🇰 Celebrate</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <header class="hero" id="home">
+        <!-- Background circles -->
+        <div class="hero-bg-circle"></div>
+        <div class="hero-bg-circle"></div>
+        <div class="hero-bg-circle"></div>
+
+        <!-- Stars canvas -->
+        <canvas id="stars-canvas"></canvas>
+
+        <div class="hero-content">
+            <!-- Flag -->
+            <div class="flag-wrapper">
+                <div class="flag-3d" role="img" aria-label="Flag of Pakistan">
+                    <div class="crescent"></div>
+                    <div class="star">★</div>
+                    <div class="flag-shine"></div>
+                </div>
+            </div>
+
+            <h1 class="hero-title">
+                Pakistan <span class="gold">Zindabad!</span>
+            </h1>
+
+            <p class="hero-sub">Happy Independence Day</p>
+
+            <p class="hero-desc">
+                Celebrating the spirit of freedom, unity, and hope.
+                Honouring the sacrifices that made our beloved Pakistan possible.
+            </p>
+
+            <div class="hero-date">
+                <span class="date-emoji">🇵🇰</span>
+                14 August 1947
+                <span class="date-emoji">🇵🇰</span>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator" aria-hidden="true">
+            <span>Scroll</span>
+            <div class="mouse"></div>
+        </div>
+    </header>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-badge">🇵🇰 Our Story</span>
+                <h2 class="section-title">
+                    The <span class="highlight">Birth</span> of a Nation
+                </h2>
+                <p class="section-subtitle">
+                    On 14 August 1947, Pakistan emerged as an independent nation —
+                    a dream realised through unwavering determination and sacrifice.
+                </p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-text reveal reveal-delay-1">
+                    <p>
+                        <strong>14 August</strong> is celebrated as Pakistan's Independence Day.
+                        On this historic day in <strong>1947</strong>, Pakistan emerged
+                        as an independent nation, carving a new destiny on the world map.
+                    </p>
+                    <p>
+                        Independence Day is a time to remember the struggle,
+                        determination, and sacrifices of those who worked for
+                        freedom. It is also a reminder that we all have a role
+                        in building a peaceful, prosperous, and united Pakistan.
+                    </p>
+                    <p>
+                        From the visionary leadership of <strong>Quaid-e-Azam</strong>
+                        to the resilience of millions, the story of Pakistan is one
+                        of courage, faith, and relentless hope.
+                    </p>
+                </div>
+
+                <div class="about-stats reveal reveal-delay-2">
+                    <div class="stat-card">
+                        <span class="stat-number">77</span>
+                        <span class="stat-label">Years of Independence</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">240M+</span>
+                        <span class="stat-label">People</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Provinces</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TIMELINE ===== -->
+    <section class="timeline-section" id="timeline">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-badge">📜 Historical Journey</span>
+                <h2 class="section-title">
+                    <span class="highlight">Key</span> Milestones
+                </h2>
+                <p class="section-subtitle">
+                    The road to independence was paved with vision, struggle, and
+                    unwavering commitment.
+                </p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-content">
+                        <span class="timeline-year">1940</span>
+                        <h4>Lahore Resolution</h4>
+                        <p>The demand for a separate homeland for Muslims of the subcontinent is formally made.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal reveal-delay-1">
+                    <div class="timeline-content">
+                        <span class="timeline-year">1947</span>
+                        <h4>Independence Day</h4>
+                        <p>Pakistan is born on 14 August 1947, becoming the world's first Islamic republic.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal reveal-delay-2">
+                    <div class="timeline-content">
+                        <span class="timeline-year">1956</span>
+                        <h4>Islamic Republic</h4>
+                        <p>Pakistan adopts its constitution, officially becoming the Islamic Republic of Pakistan.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal reveal-delay-3">
+                    <div class="timeline-content">
+                        <span class="timeline-year">Today</span>
+                        <h4>A Nation United</h4>
+                        <p>Pakistan continues to grow, innovate, and inspire — a proud nation with a rich heritage and a bright future.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== VALUES ===== -->
+    <section class="values-section" id="values">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-badge">⭐ Our Foundation</span>
+                <h2 class="section-title">
+                    <span class="highlight">National</span> Values
+                </h2>
+                <p class="section-subtitle">
+                    The principles that bind us together as one nation.
+                </p>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-card reveal reveal-delay-1">
+                    <span class="value-icon">🤝</span>
+                    <h3>Unity</h3>
+                    <p>
+                        Together we can build a stronger, more peaceful Pakistan
+                        through cooperation, understanding, and shared purpose.
+                    </p>
+                </div>
+
+                <div class="value-card reveal reveal-delay-2">
+                    <span class="value-icon">🕊️</span>
+                    <h3>Peace</h3>
+                    <p>
+                        Let us work toward a future filled with peace,
+                        respect, and harmony for every citizen of this great nation.
+                    </p>
+                </div>
+
+                <div class="value-card reveal reveal-delay-3">
+                    <span class="value-icon">🌟</span>
+                    <h3>Progress</h3>
+                    <p>
+                        Education, hard work, and innovation can help our
+                        country move toward a brighter, more prosperous future.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== QUOTE ===== -->
+    <section class="quote-section reveal">
+        <div class="container">
+            <blockquote>
+                With faith, discipline and selfless devotion to duty,
+                there is nothing worthwhile that you cannot achieve.
+            </blockquote>
+            <cite>— Muhammad Ali Jinnah, Quaid-e-Azam</cite>
+        </div>
+    </section>
+
+    <!-- ===== MESSAGE / CTA ===== -->
+    <section class="message-section" id="message">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-badge">❤️ From The Heart</span>
+                <h2 class="section-title">
+                    A <span class="highlight">Message</span> for Pakistan
+                </h2>
+                <p class="section-subtitle">
+                    May Pakistan continue to grow with peace, knowledge,
+                    unity, and prosperity. Let every generation contribute
+                    something meaningful to the country we call home.
+                </p>
+            </div>
+
+            <a href="#home" class="btn-primary reveal reveal-delay-2">
+                <span class="btn-emoji">🇵🇰</span>
+                Pakistan Zindabad!
+                <span class="btn-emoji">🇵🇰</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <span class="footer-flag" aria-hidden="true">🇵🇰</span>
+        <h3>Pakistan Independence Day</h3>
+        <p class="footer-date">14 August 1947 — 14 August 2026</p>
+        <div class="footer-divider"></div>
+        <p>
+            Made with <span class="footer-heart">❤️</span> for Pakistan —
+            a land of rich culture, resilient people, and endless hope.
+        </p>
+        <p style="margin-top:12px; font-size:13px; opacity:0.4;">
+            © 2026 · Pakistan Zindabad
+        </p>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        (function() {
+            'use strict';
+
+            // ===== NAVBAR SCROLL =====
+            const navbar = document.getElementById('navbar');
+            let lastScroll = 0;
+
+            window.addEventListener('scroll', function() {
+                const current = window.scrollY;
+                if (current > 40) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+                lastScroll = current;
+            });
+
+            // ===== MOBILE HAMBURGER =====
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+
+            hamburger.addEventListener('click', function() {
+                const isOpen = navMenu.classList.toggle('open');
+                hamburger.classList.toggle('active');
+                hamburger.setAttribute('aria-expanded', isOpen);
+            });
+
+            // Close menu on link click
+            document.querySelectorAll('#nav-menu a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    navMenu.classList.remove('open');
+                    hamburger.classList.remove('active');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            // ===== SCROLL REVEAL =====
+            const revealElements = document.querySelectorAll('.reveal');
+
+            function checkReveal() {
+                const windowHeight = window.innerHeight;
+                revealElements.forEach(function(el) {
+                    const rect = el.getBoundingClientRect();
+                    const triggerPoint = rect.top + rect.height * 0.20;
+                    if (triggerPoint < windowHeight) {
+                        el.classList.add('visible');
+                    }
+                });
+            }
+
+            // Check on load and scroll
+            window.addEventListener('load', checkReveal);
+            window.addEventListener('scroll', checkReveal);
+            // Also check on resize
+            window.addEventListener('resize', checkReveal);
+
+            // ===== STARS CANVAS =====
+            const canvas = document.getElementById('stars-canvas');
+            const ctx = canvas.getContext('2d');
+
+            let width, height;
+            let stars = [];
+            const STAR_COUNT = 120;
+
+            function resizeCanvas() {
+                const hero = canvas.parentElement;
+                const rect = hero.getBoundingClientRect();
+                canvas.width = rect.width;
+                canvas.height = rect.height;
+                width = canvas.width;
+                height = canvas.height;
+            }
+
+            function createStars() {
+                stars = [];
+                for (let i = 0; i < STAR_COUNT; i++) {
+                    stars.push({
+                        x: Math.random() * width,
+                        y: Math.random() * height,
+                        radius: Math.random() * 1.8 + 0.5,
+                        speed: Math.random() * 0.3 + 0.05,
+                        opacity: Math.random() * 0.7 + 0.3,
+                        driftX: (Math.random() - 0.5) * 0.2,
+                        driftY: (Math.random() - 0.5) * 0.2,
+                    });
+                }
+            }
+
+            function drawStars() {
+                ctx.clearRect(0, 0, width, height);
+
+                stars.forEach(function(star) {
+                    // Twinkle
+                    const twinkle = Math.sin(Date.now() * 0.001 * star.speed * 2 + star.x) * 0.25 + 0.75;
+                    const opacity = star.opacity * twinkle;
+
+                    ctx.beginPath();
+                    ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = 'rgba(255, 255, 255, ' + opacity + ')';
+                    ctx.fill();
+
+                    // Glow for larger stars
+                    if (star.radius > 1.4) {
+                        ctx.shadowColor = 'rgba(247, 212, 74, 0.12)';
+                        ctx.shadowBlur = 10;
+                        ctx.beginPath();
+                        ctx.arc(star.x, star.y, star.radius * 0.5, 0, Math.PI * 2);
+                        ctx.fillStyle = 'rgba(247, 212, 74, 0.15)';
+                        ctx.fill();
+                        ctx.shadowBlur = 0;
+                    }
+
+                    // Slow drift
+                    star.x += star.driftX * 0.02;
+                    star.y += star.driftY * 0.02;
+
+                    // Wrap around
+                    if (star.x < 0) star.x = width;
+                    if (star.x > width) star.x = 0;
+                    if (star.y < 0) star.y = height;
+                    if (star.y > height) star.y = 0;
+                });
+
+                requestAnimationFrame(drawStars);
+            }
+
+            // Init canvas
+            resizeCanvas();
+            createStars();
+            drawStars();
+
+            // Resize handler
+            let resizeTimeout;
+            window.addEventListener('resize', function() {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(function() {
+                    resizeCanvas();
+                    createStars();
+                }, 200);
+            });
+
+        })();
+    </script>
+
+</body>
+</html>
